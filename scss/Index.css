@@ -1,0 +1,336 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+dl,
+ol,
+ul {
+  margin-top: 0;
+  margin-bottom: 0rem;
+}
+
+ol,
+ul {
+  padding-left: 0rem;
+}
+
+header {
+  background-color: #fff;
+}
+header .logo {
+  max-width: 100%;
+}
+header .logo img {
+  max-width: 100%;
+}
+header nav ul a {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: #292728;
+}
+header .navButtons span {
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 0.7rem 1rem;
+  border-radius: 3px;
+  background-color: #ee341d;
+  border: 0;
+}
+header .navButtons span:first-child {
+  margin-right: 0.3rem;
+  background-color: #24aadd;
+}
+
+.slider {
+  width: 100%;
+  background-image: url(../assets/images/img3.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 5rem;
+  position: relative;
+}
+.slider::after {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  bottom: 0px;
+  right: 0px;
+  content: "";
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.slider .itemConentWrapper {
+  position: relative;
+  z-index: 9;
+}
+.slider .itemConentWrapper h2 {
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: #fff;
+  text-transform: uppercase;
+  margin-bottom: 0px;
+}
+.slider .itemConentWrapper h1 {
+  font-size: 4.4rem;
+  font-weight: bold;
+  color: #fff;
+  text-transform: uppercase;
+  line-height: 4.4rem;
+}
+.slider .itemConentWrapper p {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: #fff;
+  padding: 2rem 0rem;
+}
+.slider .itemConentWrapper span {
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 1rem 2rem;
+  border-radius: 3px;
+  background-color: #ee341d;
+  border: 0;
+  color: #fff;
+}
+
+.searchBar {
+  background-color: #24aadd;
+}
+.searchBar .formGroup label {
+  display: block;
+  font-weight: 700;
+  font-size: 0.8rem;
+  color: #fff;
+  text-transform: uppercase;
+  padding-bottom: 0.2rem;
+}
+.searchBar .formGroup input,
+.searchBar .formGroup select {
+  width: 100%;
+  padding: 1rem;
+  font-size: 0.8rem;
+  color: #24aadd;
+  border: 0;
+  outline: 0;
+  border-radius: 3px;
+}
+.searchBar .formGroup input::-moz-placeholder, .searchBar .formGroup select::-moz-placeholder {
+  color: #24aadd;
+}
+.searchBar .formGroup input:-ms-input-placeholder, .searchBar .formGroup select:-ms-input-placeholder {
+  color: #24aadd;
+}
+.searchBar .formGroup input::placeholder,
+.searchBar .formGroup select::placeholder {
+  color: #24aadd;
+}
+.searchBar .searchBtn {
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 1rem 2rem;
+  border-radius: 3px;
+  background-color: #ee341d;
+  border: 0;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  margin-top: 1.5rem;
+}
+.searchBar .searchBtn i {
+  margin-right: 0.8rem;
+  font-size: 1rem;
+}
+
+.jobCatogries {
+  padding: 5rem 0rem;
+}
+.jobCatogries h1 {
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: #292728;
+  text-transform: uppercase;
+}
+.jobCatogries p {
+  font-size: 0.9rem;
+  color: #272727;
+  padding: 0 1rem;
+  margin: 1rem 0rem 2rem 0rem;
+}
+.jobCatogries .jobs .wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #eee;
+  border-radius: 3px;
+  width: 100%;
+  height: 170px;
+}
+.jobCatogries .jobs .wrapper .icon {
+  width: 4rem;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  color: #24aadd;
+  background-color: #e5f4fb;
+  border-radius: 50%;
+}
+.jobCatogries .jobs .wrapper .heading {
+  font-weight: 700;
+  font-size: 0.8rem;
+  color: #272727;
+  padding-top: 1rem;
+}
+.jobCatogries .allCatagoriesBtn {
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 0.5rem 2rem;
+  border-radius: 3px;
+  background-color: #ee341d;
+  border: 0;
+  color: #fff;
+}
+
+.rendomJobs {
+  padding: 5rem 0rem;
+  background-color: #f1f0fe;
+}
+.rendomJobs h1 {
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: #292728;
+  text-transform: uppercase;
+}
+.rendomJobs p {
+  font-size: 0.9rem;
+  color: #272727;
+  padding: 0 1rem;
+  margin: 1rem 0rem 2rem 0rem;
+}
+.rendomJobs .jobTypes {
+  background-color: #fff;
+  padding: 0.4rem;
+  border: 2px solid rgb(232, 230, 230);
+}
+.rendomJobs .jobTypes ul li {
+  font-weight: 700;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  border-radius: 3px;
+  padding: 0.5rem 2rem;
+  color: #9793b4;
+  cursor: pointer;
+}
+.rendomJobs .jobTypes ul li:first-child {
+  background-color: #24aadd;
+  color: #fff;
+}
+.rendomJobs .jobCardWrapper {
+  background-color: #fff;
+  border: 2px solid #eee;
+  position: relative;
+}
+.rendomJobs .jobCardWrapper .initialDetails {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 2rem;
+}
+.rendomJobs .jobCardWrapper .initialDetails .logo {
+  text-align: center;
+}
+.rendomJobs .jobCardWrapper .initialDetails .logo img {
+  padding: 1rem;
+  width: 90px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: #e5f4fb;
+}
+.rendomJobs .jobCardWrapper .initialDetails .jobTitle {
+  font-weight: 500;
+  margin-top: 0.4rem;
+}
+.rendomJobs .jobCardWrapper .initialDetails .compenyName {
+  font-size: 0.8rem;
+  color: #878787;
+}
+.rendomJobs .jobCardWrapper .adressNrating {
+  border: 1px solid #eee;
+  display: flex;
+}
+.rendomJobs .jobCardWrapper .adressNrating .address {
+  width: 50%;
+  border-right: 1px solid #eee;
+  padding: 0.5rem 0.6rem;
+}
+.rendomJobs .jobCardWrapper .adressNrating .address .icon {
+  color: #24aadd;
+}
+.rendomJobs .jobCardWrapper .adressNrating .address .completeAddress {
+  font-size: 0.8rem;
+  color: #878787;
+}
+.rendomJobs .jobCardWrapper .adressNrating .rating {
+  padding: 0.5rem 0.6rem;
+}
+.rendomJobs .jobCardWrapper .adressNrating .rating .icon {
+  color: #24aadd;
+}
+.rendomJobs .jobCardWrapper .adressNrating .rating .TotalRaitng {
+  font-size: 0.8rem;
+  color: #878787;
+}
+.rendomJobs .jobCardWrapper .applyBtn {
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+}
+.rendomJobs .jobCardWrapper .applyBtn span {
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 0.7rem 2rem;
+  border-radius: 3px;
+  background-color: #ee341d;
+  border: 0;
+  color: #fff;
+}
+.rendomJobs .jobCardWrapper .impNotice {
+  margin: 0.5rem;
+  font-size: 0.75rem;
+  color: #494848;
+}
+.rendomJobs .jobCardWrapper .impNotice span {
+  font-weight: 500;
+  color: rgb(22, 22, 22);
+}
+.rendomJobs .jobCardWrapper .jobType {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  font-weight: 700;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  border-radius: 3px;
+  padding: 0.2rem 0.5rem;
+  background-color: #24aadd;
+  color: #fff;
+  cursor: pointer;
+}/*# sourceMappingURL=Index.css.map */
