@@ -1,0 +1,435 @@
+$color1: #1f7dbc;
+$color2: #6db12d;
+$color3: #e3051f;
+
+html {
+    padding: 0px;
+    margin: 0px;
+    font-size: 62.5%;
+}
+
+@font-face {
+    font-family: muli;
+    src: url(../fonts/muli.regular.ttf);
+}
+body {
+    font-family: muli;
+    font-size: 1.6rem;
+    a {
+        text-decoration: none;
+    }
+}
+
+header {
+    background-color: transparent;
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    left: 0px;
+    z-index: 99999;
+    border-bottom: 1px solid $color1;
+    background: rgb(0, 0, 0);
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(66, 66, 66, 1) 0%, rgba(255, 255, 255, 0) 100%);
+    .topHeader {
+        ul {
+            li {
+                margin-left: 0px;
+                a {
+                    text-transform: uppercase;
+                    // font-weight: 100;
+                    padding: 1rem 2rem;
+                    color: #ffffffcc;
+                    font-size: 1.4rem;
+                    display: block;
+                    text-align: left;
+                }
+                &:first-child {
+                    border-right: 1px solid #ffffffcc;
+                }
+            }
+        }
+    }
+    nav {
+        padding: 2rem;
+        .mobileMenuColumn {
+            display: none;
+        }
+        ul {
+            display: flex;
+            li {
+                font-size: 1.8rem;
+                font-weight: 400;
+                cursor: pointer;
+                color: #fff;
+                i {
+                    font-size: 1.3rem;
+                }
+                .search {
+                    font-size: 1.8rem;
+                }
+                .menu {
+                    font-size: 2rem;
+                }
+            }
+        }
+    }
+    .headerColors {
+        width: 100%;
+        display: none;
+        .color1 {
+            background-color: $color1;
+            width: 33%;
+            height: 0.4rem;
+        }
+        .color2 {
+            background-color: $color2;
+            width: 33%;
+            height: 0.4rem;
+        }
+        .color3 {
+            background-color: $color3;
+            width: 34%;
+            height: 0.4rem;
+        }
+    }
+}
+.home-slider {
+    position: relative;
+    .home-slider-content {
+        position: absolute;
+        z-index: 99;
+        top: 50%;
+        left: 6%;
+        transform: translate(-0%, -50%);
+        width: 50%;
+        color: #fff;
+        span {
+            font-size: 3rem;
+        }
+        h1 {
+            font-size: 5rem;
+        }
+        p {
+            font-size: 2rem;
+        }
+    }
+    .item {
+        position: relative;
+        .main-slider-bg {
+            width: 100vw;
+            height: 120vh;
+        }
+        .main-slider-bg1 {
+            background-image: url(../images/banner1.jpg);
+        }
+        .main-slider-bg2 {
+            background-image: url(../images/banner2.jpg);
+        }
+        .main-slider-bg3 {
+            background-image: url(../images/banner3.jpg);
+            &::after {
+                mix-blend-mode: overlay;
+                top: 0%;
+                background-color: $color3;
+                left: 0%;
+                position: absolute;
+                content: "";
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .main-slider-bg {
+            background-size: cover;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+        }
+        .fixedBottomCatogries {
+            position: absolute;
+            left: 0px;
+            bottom: 0px;
+            width: 100%;
+            h2 {
+                text-align: center;
+                font-size: 2.8rem;
+                color: #fff;
+                padding: 2rem;
+                position: relative;
+                &::after {
+                    position: absolute;
+                    bottom: -5px;
+                    left: 0px;
+                    width: 100%;
+                    height: 0.6rem;
+                    z-index: 9;
+                    content: "";
+                }
+            }
+            .afterEffect1 {
+                &::after {
+                    background-color: $color1;
+                }
+            }
+            .afterEffect2 {
+                &::after {
+                    background-color: $color2;
+                }
+            }
+            .afterEffect3 {
+                &::after {
+                    background-color: $color3;
+                }
+            }
+        }
+    }
+}
+
+.whatWeDo {
+    margin-top: 8rem;
+    h2 {
+        font-size: 4.8rem;
+    }
+    h3 {
+        font-size: 2.2rem;
+        margin-top: 4rem;
+        line-height: 2.9rem;
+        color: #1d1d1b;
+    }
+    .workCard {
+        margin-top: 5rem;
+        margin-bottom: 2rem;
+        .cardImg {
+            position: relative;
+            &:hover {
+                transition: all 0.6s ease;
+                .sideWhiteBlock {
+                    width: 11rem;
+                    height: 11rem;
+                }
+                .sideColorBlock {
+                    width: 3rem;
+                    height: 3rem;
+                }
+            }
+            &::after {
+                position: absolute;
+                left: 0px;
+                top: 0px;
+                width: 100%;
+                height: 100%;
+                mix-blend-mode: multiply;
+                content: "";
+                z-index: 9;
+                background-color: $color1;
+            }
+            img {
+                width: 100%;
+                height: 23rem;
+            }
+
+            .sideWhiteBlock {
+                z-index: 99;
+                transition: all 0.6s ease;
+                position: absolute;
+                right: 0px;
+                bottom: 0px;
+                width: 9rem;
+                height: 9rem;
+                border-right: 2.5rem solid #fff;
+                border-bottom: 2.5rem solid #fff;
+            }
+            .sideColorBlock {
+                z-index: 99;
+                transition: all 0.6s ease;
+                position: absolute;
+                right: 0px;
+                bottom: 0px;
+                width: 2rem;
+                height: 2rem;
+                border-right: 0.5rem solid $color1;
+                border-bottom: 0.5rem solid $color1;
+            }
+        }
+        .cardTitle {
+            font-size: 3.2rem;
+            margin: 4rem 0 2rem 0;
+        }
+        .cardDesc {
+            font-size: 1.6rem;
+        }
+        .cardBtn {
+            margin-top: 5rem;
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+            // border-left: .3rem solid $color1;
+            padding: 0rem 2.3rem 1.5rem 2.3rem;
+            &::after {
+                position: absolute;
+                left: 0px;
+                bottom: 0px;
+                height: 0.2rem;
+                background-color: $color1;
+                width: 50%;
+                transition: all 0.2s ease-out 0.1s;
+                content: "";
+            }
+            &::before {
+                position: absolute;
+                left: 0px;
+                bottom: 0px;
+                height: 100%;
+                background-color: $color1;
+                width: 0.2rem;
+                transition: all 0.2s ease-out 0.1s;
+                content: "";
+            }
+            &:hover {
+                transition: all 0.2s ease-out 0.1s;
+                &::after {
+                    width: 100%;
+                }
+                &::before {
+                    height: 0%;
+                }
+            }
+            span {
+                line-height: 2.2rem;
+                text-transform: uppercase;
+                font-size: 1.7rem;
+                letter-spacing: 0.35rem;
+                color: #1d1d1b;
+                font-weight: 800;
+            }
+        }
+        .workCard1,
+        .workCard4 {
+            .cardBtn {
+                &::after,
+                &::before {
+                    background-color: $color1;
+                }
+            }
+            .cardImg {
+                &::after {
+                    background-color: $color1;
+                }
+                .sideColorBlock {
+                    border-right: 0.5rem solid $color1;
+                    border-bottom: 0.5rem solid $color1;
+                }
+            }
+        }
+    }
+    .workCard2,
+    .workCard5 {
+        .cardBtn {
+            &::after,
+            &::before {
+                background-color: $color2;
+            }
+        }
+        .cardImg {
+            &::after {
+                background-color: $color2;
+            }
+            .sideColorBlock {
+                border-right: 0.5rem solid $color2;
+                border-bottom: 0.5rem solid $color2;
+            }
+        }
+    }
+    .workCard3,
+    .workCard6 {
+        .cardBtn {
+            &::after,
+            &::before {
+                background-color: $color3;
+            }
+        }
+        .cardImg {
+            &::after {
+                background-color: $color3;
+            }
+            .sideColorBlock {
+                border-right: 0.5rem solid $color3;
+                border-bottom: 0.5rem solid $color3;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .home-slider {
+        .home-slider-content {
+            width: 100%;
+        }
+    }
+    .whatWeDo h2 {
+        font-size: 4rem;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    header {
+        .topHeader {
+            display: none;
+        }
+        nav {
+            .mobileMenuColumn {
+                display: block;
+            }
+            .navigationBar {
+                display: none;
+                ul {
+                    li {
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+    .home-slider {
+        
+        .home-slider-content {
+            span {
+                font-size: 2rem;
+            }
+            h1 {
+                font-size: 3rem;
+            }
+            p {
+                font-size: 1.4rem;
+            }
+        }
+
+        .item {
+            .fixedBottomCatogries h2 {
+                font-size: 1.4rem;
+            }
+        }
+        .whatWeDo .workCard .cardImg img {
+            height: 19rem;
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .whatWeDo {
+        h2 {
+            font-size: 2.5rem;
+        }
+        h3 {
+            font-size: 1.8rem;
+        }
+        .workCard {
+            .cardImg {
+                img {
+                    height: auto;
+                }
+            }
+        }
+    }
+    .whatWeDo .workCard .cardBtn {
+        margin-left: 1rem;
+    }
+}
