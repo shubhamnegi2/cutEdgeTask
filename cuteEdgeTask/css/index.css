@@ -11,6 +11,7 @@ html {
 body {
   font-family: muli;
   font-size: 1.6rem;
+  overflow-x: hidden;
 }
 body a {
   text-decoration: none;
@@ -26,6 +27,93 @@ header {
   border-bottom: 1px solid #1f7dbc;
   background: rgb(0, 0, 0);
   background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgb(66, 66, 66) 0%, rgba(255, 255, 255, 0) 100%);
+}
+header .topHeader ul .countriesWrapper {
+  position: relative;
+}
+header .topHeader ul .countriesWrapper:hover .locations {
+  display: block;
+}
+header .topHeader ul .countriesWrapper .locations {
+  display: none;
+  background-color: rgba(59, 59, 58, 0.9);
+  padding: 3rem;
+  width: 25rem;
+  position: absolute;
+  left: 2rem;
+  top: 4rem;
+  z-index: 999999;
+}
+header .topHeader ul .countriesWrapper .locations ul {
+  position: relative;
+  z-index: 999999;
+}
+header .topHeader ul .countriesWrapper .locations ul li:first-child {
+  border-right: 0px solid rgba(255, 255, 255, 0.8);
+}
+header .topHeader ul .countriesWrapper .locations ul li:nth-child(3n+1) {
+  border-bottom: 2px solid #1f7dbc;
+}
+header .topHeader ul .countriesWrapper .locations ul li:nth-child(3n+2) {
+  border-bottom: 2px solid #6db12d;
+}
+header .topHeader ul .countriesWrapper .locations ul li:nth-child(3n+3) {
+  border-bottom: 2px solid #e3051f;
+}
+header .topHeader ul .countriesWrapper .locations ul li a {
+  color: #fff;
+  padding: 0.4rem 0rem;
+  font-size: 1.5rem;
+  text-transform: capitalize;
+}
+header .topHeader ul .groupsWrapper {
+  position: relative;
+}
+header .topHeader ul .groupsWrapper:hover .groups {
+  display: block;
+}
+header .topHeader ul .groupsWrapper .groups {
+  display: none;
+  background-color: rgba(59, 59, 58, 0.9);
+  padding: 3rem;
+  width: 25rem;
+  position: absolute;
+  left: 0rem;
+  top: 4rem;
+  z-index: 999999;
+}
+header .topHeader ul .groupsWrapper .groups ul {
+  position: relative;
+  z-index: 999999;
+}
+header .topHeader ul .groupsWrapper .groups ul li:first-child {
+  border-right: 0px solid rgba(255, 255, 255, 0.8);
+}
+header .topHeader ul .groupsWrapper .groups ul li:nth-child(3n+1) {
+  border-bottom: 2px solid #1f7dbc;
+}
+header .topHeader ul .groupsWrapper .groups ul li:nth-child(3n+2) {
+  border-bottom: 2px solid #6db12d;
+}
+header .topHeader ul .groupsWrapper .groups ul li:nth-child(3n+3) {
+  border-bottom: 2px solid #e3051f;
+}
+header .topHeader ul .groupsWrapper .groups ul li:last-child {
+  border-bottom: 0px solid #e3051f;
+}
+header .topHeader ul .groupsWrapper .groups ul li {
+  cursor: pointer;
+  color: #fff;
+  padding: 0.7rem 0rem;
+  font-size: 1.5rem;
+  text-transform: capitalize;
+  color: rgba(255, 255, 255, 0.8);
+}
+header .topHeader ul .groupsWrapper .groups ul li h4 {
+  font-size: 1.5rem;
+}
+header .topHeader ul .groupsWrapper .groups ul li p {
+  font-size: 1.2rem;
 }
 header .topHeader ul li {
   margin-left: 0px;
@@ -287,17 +375,17 @@ header .headerColors .color3 {
   color: #1d1d1b;
   font-weight: 800;
 }
-.whatWeDo .workCard .workCard1 .cardBtn::after, .whatWeDo .workCard .workCard1 .cardBtn::before,
-.whatWeDo .workCard .workCard4 .cardBtn::after,
-.whatWeDo .workCard .workCard4 .cardBtn::before {
+.whatWeDo .workCard1 .cardBtn::after, .whatWeDo .workCard1 .cardBtn::before,
+.whatWeDo .workCard4 .cardBtn::after,
+.whatWeDo .workCard4 .cardBtn::before {
   background-color: #1f7dbc;
 }
-.whatWeDo .workCard .workCard1 .cardImg::after,
-.whatWeDo .workCard .workCard4 .cardImg::after {
+.whatWeDo .workCard1 .cardImg::after,
+.whatWeDo .workCard4 .cardImg::after {
   background-color: #1f7dbc;
 }
-.whatWeDo .workCard .workCard1 .cardImg .sideColorBlock,
-.whatWeDo .workCard .workCard4 .cardImg .sideColorBlock {
+.whatWeDo .workCard1 .cardImg .sideColorBlock,
+.whatWeDo .workCard4 .cardImg .sideColorBlock {
   border-right: 0.5rem solid #1f7dbc;
   border-bottom: 0.5rem solid #1f7dbc;
 }
@@ -328,6 +416,136 @@ header .headerColors .color3 {
 .whatWeDo .workCard6 .cardImg .sideColorBlock {
   border-right: 0.5rem solid #e3051f;
   border-bottom: 0.5rem solid #e3051f;
+}
+.whatWeDo .workCard4 {
+  padding-bottom: 8rem;
+  border-bottom: 1px solid #1f7dbc;
+}
+.whatWeDo .workCard5 {
+  padding-bottom: 8rem;
+  border-bottom: 1px solid #6db12d;
+}
+.whatWeDo .workCard6 {
+  padding-bottom: 8rem;
+  border-bottom: 1px solid #e3051f;
+}
+
+.ourClients {
+  margin-top: 8rem;
+}
+.ourClients h2 {
+  font-size: 4.8rem;
+}
+.ourClients h3 {
+  font-size: 2.6rem;
+  line-height: 2.9rem;
+  color: #1f7dbc;
+}
+.ourClients .ourClints-slider {
+  margin-top: 5rem;
+}
+.ourClients .ourClints-slider .item {
+  padding-top: 2rem;
+}
+.ourClients .ourClints-slider .bbBlue {
+  border-bottom: 1px solid #1f7dbc;
+}
+.ourClients .ourClints-slider .bbRed {
+  border-bottom: 1px solid #6db12d;
+}
+.ourClients .ourClints-slider .bbGreen {
+  border-bottom: 1px solid #e3051f;
+}
+.ourClients .ourClints-slider img {
+  transition: all 0.3s ease;
+  padding-bottom: 1rem;
+  position: relative;
+  top: 0rem;
+}
+.ourClients .ourClints-slider img:hover {
+  transition: all 0.3s ease;
+  top: -2rem;
+}
+
+.ourPresence {
+  width: 100vw;
+  height: 100vh;
+  background-image: url(../images/CPM-Worldwide-img.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  position: relative;
+}
+.ourPresence::after {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  bottom: 0px;
+  right: 0px;
+  content: "";
+  background-color: rgb(31, 125, 188);
+  mix-blend-mode: multiply;
+}
+.ourPresence .content {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 100%;
+  transform: translate(-50%, -50%);
+  z-index: 99;
+  color: #fff;
+  text-align: center;
+}
+.ourPresence .content h2 {
+  font-size: 4.8rem;
+}
+.ourPresence .content p {
+  margin-top: 1rem;
+  font-size: 2.1rem;
+}
+.ourPresence .content .btn {
+  display: inline-block;
+  margin-top: 3rem;
+  cursor: pointer;
+  position: relative;
+  padding: 0rem 2.3rem 1.5rem 2.3rem;
+}
+.ourPresence .content .btn::after {
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  height: 0.2rem;
+  background-color: #e3051f;
+  width: 50%;
+  transition: all 0.2s ease-out 0.1s;
+  content: "";
+}
+.ourPresence .content .btn::before {
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  height: 100%;
+  background-color: #e3051f;
+  width: 0.2rem;
+  transition: all 0.2s ease-out 0.1s;
+  content: "";
+}
+.ourPresence .content .btn:hover {
+  transition: all 0.2s ease-out 0.1s;
+}
+.ourPresence .content .btn:hover::after {
+  width: 100%;
+}
+.ourPresence .content .btn:hover::before {
+  height: 0%;
+}
+.ourPresence .content .btn span {
+  line-height: 2.2rem;
+  text-transform: uppercase;
+  font-size: 2rem;
+  letter-spacing: 0.35rem;
+  color: #fff;
+  font-weight: 800;
 }
 
 @media screen and (max-width: 991px) {
@@ -366,6 +584,12 @@ header .headerColors .color3 {
   .home-slider .whatWeDo .workCard .cardImg img {
     height: 19rem;
   }
+  .ourClients h2 {
+    font-size: 3.8rem;
+  }
+  .ourClients h3 {
+    font-size: 2rem;
+  }
 }
 @media screen and (max-width: 500px) {
   .whatWeDo h2 {
@@ -379,5 +603,20 @@ header .headerColors .color3 {
   }
   .whatWeDo .workCard .cardBtn {
     margin-left: 1rem;
+  }
+  .ourClients h2 {
+    font-size: 3rem;
+  }
+  .ourClients h3 {
+    font-size: 1.6rem;
+  }
+  .ourPresence .content h2 {
+    font-size: 3.3rem;
+  }
+  .ourPresence .content p {
+    font-size: 1.8rem;
+  }
+  .ourPresence .content .btn span {
+    font-size: 1.6rem;
   }
 }/*# sourceMappingURL=index.css.map */

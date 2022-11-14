@@ -15,6 +15,7 @@ html {
 body {
     font-family: muli;
     font-size: 1.6rem;
+    overflow-x: hidden;
     a {
         text-decoration: none;
     }
@@ -32,6 +33,100 @@ header {
     background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(66, 66, 66, 1) 0%, rgba(255, 255, 255, 0) 100%);
     .topHeader {
         ul {
+            .countriesWrapper {
+                position: relative;
+                &:hover {
+                    .locations {
+                        display: block;
+                    }
+                }
+                .locations {
+                    display: none;
+                    background-color: rgba(59, 59, 58, 0.9);
+                    padding: 3rem;
+                    width: 25rem;
+                    position: absolute;
+                    left: 2rem;
+                    top: 4rem;
+                    z-index: 999999;
+                    ul {
+                        position: relative;
+                        z-index: 999999;
+                        li:first-child {
+                            border-right: 0px solid #ffffffcc;
+                        }
+                        li:nth-child(3n + 1) {
+                            border-bottom: 2px solid $color1;
+                        }
+                        li:nth-child(3n + 2) {
+                            border-bottom: 2px solid $color2;
+                        }
+                        li:nth-child(3n + 3) {
+                            border-bottom: 2px solid $color3;
+                        }
+                        li {
+                            a {
+                                color: #fff;
+                                padding: 0.4rem 0rem;
+                                font-size: 1.5rem;
+                                text-transform: capitalize;
+                            }
+                        }
+                    }
+                }
+            }
+            .groupsWrapper {
+                position: relative;
+                &:hover {
+                    .groups {
+                        display: block;
+                    }
+                }
+                .groups {
+                    display: none;
+                    background-color: rgba(59, 59, 58, 0.9);
+                    padding: 3rem;
+                    width: 25rem;
+                    position: absolute;
+                    left: 0rem;
+                    top: 4rem;
+                    z-index: 999999;
+
+                    ul {
+                        position: relative;
+                        z-index: 999999;
+                        li:first-child {
+                            border-right: 0px solid #ffffffcc;
+                        }
+                        li:nth-child(3n + 1) {
+                            border-bottom: 2px solid $color1;
+                        }
+                        li:nth-child(3n + 2) {
+                            border-bottom: 2px solid $color2;
+                        }
+                        li:nth-child(3n + 3) {
+                            border-bottom: 2px solid $color3;
+                        }
+                        li:last-child {
+                            border-bottom: 0px solid $color3;
+                        }
+                        li {
+                            cursor: pointer;
+                            color: #fff;
+                            padding: 0.7rem 0rem;
+                            font-size: 1.5rem;
+                            text-transform: capitalize;
+                            color: rgba(255, 255, 255, 0.8);
+                            h4 {
+                                font-size: 1.5rem;
+                            }
+                            p {
+                                font-size: 1.2rem;
+                            }
+                        }
+                    }
+                }
+            }
             li {
                 margin-left: 0px;
                 a {
@@ -301,22 +396,22 @@ header {
                 font-weight: 800;
             }
         }
-        .workCard1,
-        .workCard4 {
-            .cardBtn {
-                &::after,
-                &::before {
-                    background-color: $color1;
-                }
+    }
+    .workCard1,
+    .workCard4 {
+        .cardBtn {
+            &::after,
+            &::before {
+                background-color: $color1;
             }
-            .cardImg {
-                &::after {
-                    background-color: $color1;
-                }
-                .sideColorBlock {
-                    border-right: 0.5rem solid $color1;
-                    border-bottom: 0.5rem solid $color1;
-                }
+        }
+        .cardImg {
+            &::after {
+                background-color: $color1;
+            }
+            .sideColorBlock {
+                border-right: 0.5rem solid $color1;
+                border-bottom: 0.5rem solid $color1;
             }
         }
     }
@@ -356,6 +451,138 @@ header {
             }
         }
     }
+    .workCard4 {
+        padding-bottom: 8rem;
+        border-bottom: 1px solid $color1;
+    }
+    .workCard5 {
+        padding-bottom: 8rem;
+        border-bottom: 1px solid $color2;
+    }
+    .workCard6 {
+        padding-bottom: 8rem;
+        border-bottom: 1px solid $color3;
+    }
+}
+
+.ourClients {
+    margin-top: 8rem;
+    h2 {
+        font-size: 4.8rem;
+    }
+    h3 {
+        font-size: 2.6rem;
+        line-height: 2.9rem;
+        color: $color1;
+    }
+    .ourClints-slider {
+        margin-top: 5rem;
+        .item {
+            padding-top: 2rem;
+        }
+        .bbBlue {
+            border-bottom: 1px solid $color1;
+        }
+        .bbRed {
+            border-bottom: 1px solid $color2;
+        }
+        .bbGreen {
+            border-bottom: 1px solid $color3;
+        }
+        img {
+            transition: all 0.3s ease;
+            padding-bottom: 1rem;
+            position: relative;
+            top: 0rem;
+            &:hover {
+                transition: all 0.3s ease;
+                top: -2rem;
+            }
+        }
+    }
+}
+
+.ourPresence {
+    width: 100vw;
+    height: 100vh;
+    background-image: url(../images/CPM-Worldwide-img.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    position: relative;
+    &::after {
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        bottom: 0px;
+        right: 0px;
+        content: "";
+        background-color: rgba(31, 125, 188, 1);
+        mix-blend-mode: multiply;
+    }
+    .content {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: 100%;
+        transform: translate(-50%, -50%);
+        z-index: 99;
+        color: #fff;
+        text-align: center;
+        h2 {
+            font-size: 4.8rem;
+        }
+        p {
+            margin-top: 1rem;
+            font-size: 2.1rem;
+        }
+        .btn {
+            display: inline-block;
+            margin-top: 3rem;
+            cursor: pointer;
+            position: relative;
+            // border-left: .3rem solid $color1;
+            padding: 0rem 2.3rem 1.5rem 2.3rem;
+            &::after {
+                position: absolute;
+                left: 0px;
+                bottom: 0px;
+                height: 0.2rem;
+                background-color: $color3;
+                width: 50%;
+                transition: all 0.2s ease-out 0.1s;
+                content: "";
+            }
+            &::before {
+                position: absolute;
+                left: 0px;
+                bottom: 0px;
+                height: 100%;
+                background-color: $color3;
+                width: 0.2rem;
+                transition: all 0.2s ease-out 0.1s;
+
+                content: "";
+            }
+            &:hover {
+                transition: all 0.2s ease-out 0.1s;
+                &::after {
+                    width: 100%;
+                }
+                &::before {
+                    height: 0%;
+                }
+            }
+            span {
+                line-height: 2.2rem;
+                text-transform: uppercase;
+                font-size: 2rem;
+                letter-spacing: 0.35rem;
+                color: #fff;
+                font-weight: 800;
+            }
+        }
+    }
 }
 
 @media screen and (max-width: 991px) {
@@ -389,7 +616,6 @@ header {
         }
     }
     .home-slider {
-        
         .home-slider-content {
             span {
                 font-size: 2rem;
@@ -409,6 +635,14 @@ header {
         }
         .whatWeDo .workCard .cardImg img {
             height: 19rem;
+        }
+    }
+    .ourClients {
+        h2 {
+            font-size: 3.8rem;
+        }
+        h3 {
+            font-size: 2rem;
         }
     }
 }
@@ -431,5 +665,24 @@ header {
     }
     .whatWeDo .workCard .cardBtn {
         margin-left: 1rem;
+    }
+    .ourClients {
+        h2 {
+            font-size: 3rem;
+        }
+        h3 {
+            font-size: 1.6rem;
+        }
+    }
+    .ourPresence .content {
+        h2 {
+            font-size: 3.3rem;
+        }
+        p {
+            font-size: 1.8rem;
+        }
+        .btn span {
+            font-size: 1.6rem;
+        }
     }
 }
